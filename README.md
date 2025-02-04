@@ -16,6 +16,8 @@ The project presents a hybrid model that combines both vision-based and pose-bas
 
 The following sections provide an in-depth look at the dataset, preprocessing steps, the model architecture, training, and results.
 
+<a id="dataset-overview"></a>
+
 ## 1. Dataset Overview
 
 The ALEX-GYM-1 dataset consists of videos capturing individuals performing three fundamental gym exercises: Squats, Lunges, and Single-Leg Romanian Deadlifts. The videos are recorded from two perspectives: frontal and lateral views. The dataset includes diverse participants with various ages and sexes, ensuring that the model can generalize to different body types and demographics.
@@ -42,6 +44,8 @@ Each video is meticulously annotated based on specific biomechanical features. F
 - **Excel files**: The dataset includes an Excel sheet with additional features like temporal sequences, repetitions, and any additional annotated labels for further analysis.
 
 The data is organized in a way that supports both **pose-based analysis** and **visual-based analysis**, enabling a hybrid model approach.
+
+<a id="data-preprocessing"></a>
 
 ## 2. Data Preprocessing
 
@@ -91,6 +95,8 @@ After calculating these pairwise distances and angles, they are concatenated to 
 
 For further details on the dataset post-preprocessing, you can access the processed data through [this link](https://drive.google.com/drive/u/1/folders/124MjpOoon8haYdXwveQAK-hSOoyS-Ivv).
 
+<a id="model-architecture"></a>
+
 ## 3. Model Architecture
 
 The proposed methodology employs two primary deep learning models to evaluate exercise performance using both **video data** and **pose data**. The combination of these models allows for a comprehensive evaluation of exercise quality.
@@ -127,6 +133,8 @@ Additionally, **early stopping** was applied with a patience of 10 epochs based 
 
 This training process resulted in high classification accuracy for all three exercise types, demonstrating the efficacy of the proposed methodology.
 
+<a id="results"></a>
+
 ## 4. Results
 
 The evaluation of the proposed models was conducted using **Hamming Loss** as the primary metric. Hamming Loss is suitable for multi-label classification tasks, as it measures the fraction of incorrectly predicted labels relative to the total number of labels. The classification task involves determining whether each feature in the exercise was performed correctly or not based on predefined criteria. Lower Hamming Loss values indicate higher accuracy in classifying and assessing exercise execution.
@@ -161,6 +169,8 @@ The Hamming Loss values for each model across the three exercises are summarized
 The results, summarized in Table II, demonstrate that the **Merged model** consistently outperforms both the **Pose-based** and **Vision-based** models across all exercises. This model achieved the lowest Hamming Loss in all three exercises, indicating superior classification accuracy and better overall movement assessment. The ability of the Merged model to combine Pose-based and Vision-based features likely contributes to its enhanced performance, as it accounts for both body postures and movement patterns.
 
 For those interested in experimenting with the models, the pre-trained weights for the Pose-based, Vision-based, and Merged models can be downloaded from the following link:[Download Pre-Trained Models](https://drive.google.com/drive/u/1/folders/1-gMrjWqwFsm77gIBTRxaZ8z_6-FMCPcc)
+
+<a id="project-setup"></a>
 
 ## 5. Project Setup
 To begin, ensure that your environment is set up correctly:
@@ -228,6 +238,8 @@ The project directory is structured as follows:
 - **merged_model**: Contains the code for the combined (merged) model using both pose and vision features.
 - **train.py**: The script to train a selected model (pose, vision, or merged).
 - **eval.py**: The script to evaluate a trained model on the test dataset.
+
+<a id="running-the-experiment"></a>
 
 ## 6. Running the Experiment
 
