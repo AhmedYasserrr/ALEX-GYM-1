@@ -16,14 +16,14 @@ This approach achieves high accuracy in classifying exercise performance and det
 - **Participants**: 45 individuals (diverse age and gender groups).
 - **Annotations**: Biomechanical criteria for each exercise.
 - **Data**: Includes video frames, pose keypoints (JSON), and metadata (Excel).
-
+For further details on the dataset post-preprocessing, you can access the processed data through [this link](https://drive.google.com/drive/u/1/folders/124MjpOoon8haYdXwveQAK-hSOoyS-Ivv).
 ## Model Performance
 
 The hybrid model outperforms single-modality approaches:
 - **Pose-based model**: Focuses on joint relationships.
 - **Vision-based model**: Captures spatio-temporal dynamics.
 - **Hybrid model**: Combines both for superior accuracy.
-
+For those interested in experimenting with the models, the pre-trained weights for the Pose-based, Vision-based, and Merged models can be downloaded from the following link:[Download Pre-Trained Models](https://drive.google.com/drive/u/1/folders/1-gMrjWqwFsm77gIBTRxaZ8z_6-FMCPcc)
 ## Getting Started
 
 ### 1. Install Dependencies
